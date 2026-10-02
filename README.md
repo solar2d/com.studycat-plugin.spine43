@@ -1,21 +1,42 @@
-# Plugin template
+# plugin.spine43 (publisherId `com.studycat`)
 
-To make it work for Solar2D plugins directory add your plugin content into the plugins directory. Then in revision, which is minimum requirement to run the plugin. Repository name must me `com.publisher.name-plugin.name` as it would be in build settings `["plugin.name"] = { publisherId = "com.publisher.name"}`.
+Spine runtime plugin for Solar2D, for skeletons exported with Spine 4.3. It loads Spine `.json` or `.skel` files with
+their `.atlas` and plays them as display objects. Current version: 3.0.0.
 
-For example, `mkdir -p plugins/2020.2600/<platform>a`.
+Platforms: Android, iOS, iOS Simulator, macOS Simulator, Windows Simulator. It needs Solar2D 2026.3731 or newer.
 
+## build.settings
 
-Example platforms are:
-* `android-kindle` will use `android` if not found
-* `android` any android platform
-* `macos` only desktop build
-* `mac-sim` desktop build or simulator
-* `win32` only desktop build
-* `win32-sim` desktop build or simulator
-* `web` for html5 builds
-* `html5` same as `web`
-* `iphone` iOS device
-* `iphone-sim` iOS simulator
-* `tvos` AppleTV device
-* `tvos-sim` Apple TV simulator
-* `lua` used if no other applicable platform found
+```lua
+settings =
+{
+    plugins =
+    {
+        ["plugin.spine43"] =
+        {
+            publisherId = "com.studycat",
+        },
+    },
+}
+```
+
+```lua
+local spine = require("plugin.spine43")
+```
+
+Use one Spine plugin per app: `plugin.spine43`, `plugin.spine42` or the older `plugin.spine`.
+
+To stay on one release, add `version = "vN"` to the entry, with a tag from this repository's Releases page.
+
+## Links
+
+- Documentation: https://spineplugin.readthedocs.io/en/4.3/
+- Moving from `plugin.spine42` (Spine 4.2): https://spineplugin.readthedocs.io/en/4.3/migration.html
+- Source, changelog and issues: https://github.com/depilz/spinePlugin
+- Skeletons exported with Spine 4.2 need `plugin.spine42`: https://github.com/solar2d/com.studycat-plugin.spine42
+
+## License
+
+The plugin includes the Spine Runtimes by Esoteric Software, under the Spine Runtimes License Agreement in
+[Spine-Runtimes-License-Agreement.txt](Spine-Runtimes-License-Agreement.txt). Each user of the plugin needs their own
+Spine Editor license: https://esotericsoftware.com/spine-editor-license
