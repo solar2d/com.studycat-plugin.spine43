@@ -1,7 +1,7 @@
 # plugin.spine43 (publisherId `com.studycat`)
 
 Spine runtime plugin for Solar2D, for skeletons exported with Spine 4.3. It loads Spine `.json` or `.skel` files with
-their `.atlas` and plays them as display objects. Current version: 3.0.0.
+their `.atlas` and plays them as display objects. Current version: 3.0.1.
 
 Platforms: Android, iOS, iOS Simulator, macOS Simulator, Windows Simulator. It needs Solar2D 2026.3731 or newer.
 
@@ -26,7 +26,8 @@ local spine = require("plugin.spine43")
 
 Use one Spine plugin per app: `plugin.spine43`, `plugin.spine42` or the older `plugin.spine`.
 
-To stay on one release, add `version = "vN"` to the entry, with a tag from this repository's Releases page.
+To stay on one release, add `version = "vN"` to the entry, with a tag from this repository's Releases page:
+`v1` is 3.0.0, `v2` is 3.0.1.
 
 ## Links
 
